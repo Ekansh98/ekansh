@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+
+<html> 
+
+  
+
+<head> 
+
+    <title> 
+
+      seconds to time string 
+
+        format hh:mm:ss using JavaScript ? 
+
+    </title> 
+
+</head> 
+
+  
+
+<body> 
+ <b> 
+
+        JavaScript | seconds to time 
+
+        string with format hh:mm:ss 
+
+    </b> 
+
+      
+
+    <p>No. of seconds is: 129</p> 
+
+      
+
+    <p> 
+
+        Time in hh:mm:ss is: 
+
+        <span class="output"></span> 
+
+    </p> 
+
+  
+
+    <button onclick="convertSecondstoTime()"> 
+
+        Get time in hh:mm:ss 
+
+    </button> 
+
+      
+
+    <script type="text/javascript"> 
+
+        function convertSecondstoTime() { 
+
+            given_seconds = 129; 
+
+  
+
+            dateObj = new Date(given_seconds * 1000); 
+
+            hours = dateObj.getUTCHours(); 
+
+            minutes = dateObj.getUTCMinutes(); 
+
+            seconds = dateObj.getSeconds(); 
+
+  
+
+            timeString = hours.toString().padStart(2, '0') 
+
+                + ':' + minutes.toString().padStart(2, '0') 
+
+                + ':' + seconds.toString().padStart(2, '0'); 
+
+  
+
+            document.querySelector('.output').textContent 
+
+                        = timeString; 
+
+        } 
+
+    </script> 
+
+</body> 
+</html>
